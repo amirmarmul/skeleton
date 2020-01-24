@@ -1,0 +1,37 @@
+<?php
+
+namespace Kcdev\Skeleton;
+
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\ServiceProvider;
+
+class SkeletonServiceProvider extends ServiceProvider
+{
+    /**
+     * Register the application services.
+     */
+    public function register()
+    {
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'skeleton');
+    }
+
+    /**
+     * Bootstrap the application services.
+     */
+    public function boot()
+    {
+        if (App::runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/config.php' => config_path('skeleton.php'),
+            ], 'config');
+
+            /*
+            $this->loadViewsFrom(__DIR__.'/../resources/views', 'skeleton');
+
+            $this->publishes([
+                __DIR__.'/../resources/views' => base_path('resources/views/vendor/skeleton'),
+            ], 'views');
+            */
+        }
+    }
+}
