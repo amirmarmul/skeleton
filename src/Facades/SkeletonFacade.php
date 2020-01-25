@@ -1,6 +1,6 @@
 <?php
 
-namespace Kcdev\Facades\Skeleton;
+namespace Kcdev\Skeleton\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

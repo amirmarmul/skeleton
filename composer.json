@@ -5,7 +5,7 @@
         "kcdev",
         ":package_name"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/amirmarmul/:package_name",
     "license": "MIT",
     "authors": [
         {
@@ -16,10 +16,10 @@
         }
     ],
     "require": {
-        "php": "^7.3"
+        "php": "^7.4",
+        "illuminate/support": "^5.8|^6.0"
     },
     "require-dev": {
-        "symfony/var-dumper": "^4.3",
         "phpunit/phpunit": "^8.2"
     },
     "autoload": {
